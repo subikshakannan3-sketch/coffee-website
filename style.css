@@ -1,0 +1,338 @@
+html {
+  scroll-behavior: smooth;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial;
+}
+body {
+  background: #2a1a0f;
+  color: white;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background: #8B0000;
+}
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.food-images {
+  display: flex;
+  gap: 8px;
+}
+.food-images img {
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  border: 2px solid #FFD700;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.food-images img:hover {
+  transform: scale(1.1);
+}
+nav a {
+  color: white;
+  margin-left: 15px;
+  text-decoration: none;
+}
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  background: #FF1493;
+  color: #1a1a1a;
+}
+.hero button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  border: none;
+  background: #1a1a1a;
+  color: #FF1493;
+  cursor: pointer;
+  font-weight: bold;
+}
+.menu {
+  padding: 40px 20px;
+  text-align: center;
+  font-family: 'Brush Script MT', 'Lucida Calligraphy', cursive;
+  font-size: 40px;
+  color: #1a1a1a;
+  font-weight: bold;
+  letter-spacing: 3px;
+  background: #FF1493;
+}
+.menu-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+.menu-images img {
+  width: 120px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 3px solid #FFD700;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.menu-images img:hover {
+  transform: scale(1.07);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+}
+.menu-items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 420px;
+  margin: 30px auto 0 auto;
+  gap: 0;
+  position: static;
+  height: auto;
+}
+.item {
+  width: 100%;
+  background: #fffbe7;
+  border: 2px solid #FFD700;
+  border-radius: 10px;
+  color: #1a1a1a;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 24px;
+  margin-bottom: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  font-size: 18px;
+  transition: box-shadow 0.2s;
+  position: static;
+}
+.item:not(:last-child) {
+  border-bottom: none;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.item:not(:first-child) {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.item:hover {
+  box-shadow: 0 4px 16px rgba(255, 215, 0, 0.15);
+  transform: scale(1.03); 
+}
+.item h3 {
+  margin: 0;
+  font-size: 18px;
+  font-family: inherit;
+  font-weight: 600;
+}
+.item span {
+  font-size: 18px;
+  font-weight: bold;
+  color: #b8860b;
+}
+.how {
+  text-align: center;
+  padding: 40px;
+  background: #FF1493;
+  color: #1a1a1a;
+  font-family: 'Lucida Calligraphy', 'Brush Script MT', cursive;
+  font-style: italic;
+}
+.steps {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: 600;
+}
+.cart-section {
+  margin-top: 40px;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.cart-icon {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+.quantity-selector {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: 600;
+}
+.qty-btn {
+  width: 40px;
+  height: 40px;
+  background: #FFD700;
+  color: #1a1a1a;
+  border: 2px solid #FFD700;
+  border-radius: 50%;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.qty-btn:hover {
+  background: #FFB700;
+  color: #1a1a1a;
+  box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
+}
+#qty-input {
+  width: 60px;
+  height: 40px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  border: 2px solid #1a1a1a;
+  border-radius: 5px;
+  background: white;
+  color: #1a1a1a;
+}
+.payment-options {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+.payment-options label {
+  font-size: 16px;
+  font-weight: 600;
+}
+.payment-btn {
+  padding: 12px 20px;
+  background: #FFD700;
+  color: #1a1a1a;
+  border: 2px solid #FFD700;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.payment-btn:hover {
+  background: #FFB700;
+  color: #1a1a1a;
+  box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
+}
+.payment-btn.active {
+  background: #FFB700;
+  color: #1a1a1a;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
+}
+.checkout-btn {
+  width: 100%;
+  padding: 14px;
+  background: #FFD700;
+  color: #1a1a1a;
+  border: 2px solid #FFD700;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.checkout-btn:hover {
+  background: #FFB700;
+  color: #1a1a1a;
+  box-shadow: 0 8px 20px rgba(255, 215, 0, 0.4);
+  transform: translateY(-2px);
+}
+.reviews {
+  text-align: center;
+  padding: 40px;
+  background: #2a1a0f;
+  color: #FFD700;
+}
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #FF1493;
+  color: #1a1a1a;
+  font-family: 'Lucida Calligraphy', 'Brush Script MT', cursive;
+  font-style: italic;
+  font-weight: 600;
+}
+@media (max-width: 700px) {
+  .menu-images {
+    gap: 8px;
+    margin-bottom: 15px;
+  }
+  .menu-images img {
+    width: 80px;
+    height: 60px;
+    border-radius: 8px;
+  }
+  .menu-items {
+    max-width: 98vw;
+    height: 400px;
+    min-width: 0;
+    min-height: 0;
+    flex-wrap: wrap;
+    position: static;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+  .item {
+    position: static !important;
+    width: 110px;
+    height: 110px;
+    margin: 0 auto 10px auto;
+    font-size: 12px;
+    padding: 10px;
+  }
+  .menu {
+    font-size: 28px;
+    padding: 20px 5px;
+  }
+  .cart-section {
+    padding: 10px;
+    max-width: 98vw;
+  }
+  .quantity-selector label,
+  .payment-options label {
+    font-size: 14px;
+  }
+  .qty-btn, #qty-input {
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+  }
+  .payment-btn, .checkout-btn {
+    font-size: 12px;
+    padding: 8px 10px;
+  }
+  .hero {
+    padding: 30px 5px;
+  }
+  .how {
+    padding: 20px 5px;
+  }
+  .reviews {
+    padding: 20px 5px;
+  }
+  footer {
+    padding: 10px 5px;
+    font-size: 14px;
+  }
+}
